@@ -148,8 +148,8 @@ export default function App() {
       {/* Hero Section */}
       <header id="inicio" className="relative h-screen flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden md:block" />
-          <div className="absolute inset-0 bg-white/30 md:hidden z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10 hidden md:block" />
+          <div className="absolute inset-0 bg-white/60 md:hidden z-10" />
           <AnimatePresence mode="wait">
             <motion.img 
               key={currentImageIndex}
@@ -356,19 +356,19 @@ export default function App() {
               <p className="text-gray-500 text-xl font-medium leading-relaxed mb-12">
                 Nuestra estructura operativa está diseñada para superar las expectativas más exigentes, combinando factor humano y tecnología.
               </p>
-              <div className="flex flex-col gap-10">
+              <div className="flex flex-col gap-8 md:gap-12">
                  {[
-                   { icon: <UserCheck className="text-brand-red" />, title: "Personal Calificado", desc: "Formación continua en normativa legal y respuesta ante emergencias aéreas y terrestres." },
-                   { icon: <Lock className="text-brand-red" />, title: "Cumplimiento Legal", desc: "Operamos bajo las leyes venezolanas y directrices del ente rector en seguridad." },
-                   { icon: <Headset className="text-brand-red" />, title: "Atención Gerencial", desc: "Cada cliente recibe un trato directo con la gerencia para ajustes en tiempo real." }
+                   { icon: <UserCheck className="text-brand-red" size={24} />, title: "Personal Calificado", desc: "Formación continua en normativa legal y respuesta ante emergencias aéreas y terrestres." },
+                   { icon: <Lock className="text-brand-red" size={24} />, title: "Cumplimiento Legal", desc: "Operamos bajo las leyes venezolanas y directrices del ente rector en seguridad." },
+                   { icon: <Headset className="text-brand-red" size={24} />, title: "Atención Gerencial", desc: "Cada cliente recibe un trato directo con la gerencia para ajustes en tiempo real." }
                  ].map((item, i) => (
-                   <div key={i} className="flex gap-8 group">
-                      <div className="flex-shrink-0 w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center shadow-soft border border-gray-100 group-hover:bg-brand-red group-hover:text-white transition-all transition-duration-500">
+                   <div key={i} className="flex gap-6 md:gap-8 group items-start">
+                      <div className="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 bg-gray-50 rounded-2xl flex items-center justify-center shadow-soft border border-gray-100 group-hover:bg-brand-red group-hover:text-white transition-all duration-500">
                          {item.icon}
                       </div>
-                      <div>
-                         <h4 className="text-xl font-black text-brand-black uppercase tracking-tight mb-2">{item.title}</h4>
-                         <p className="text-gray-400 font-medium text-sm leading-relaxed">{item.desc}</p>
+                      <div className="flex-1">
+                         <h4 className="text-lg md:text-xl font-black text-brand-black uppercase tracking-tight mb-2 leading-tight">{item.title}</h4>
+                         <p className="text-gray-400 font-medium text-sm md:text-base leading-relaxed">{item.desc}</p>
                       </div>
                    </div>
                  ))}
